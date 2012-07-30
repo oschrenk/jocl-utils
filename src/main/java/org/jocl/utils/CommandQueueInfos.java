@@ -27,9 +27,14 @@
 
 package org.jocl.utils;
 
-import static org.jocl.CL.*;
+import static org.jocl.CL.CL_QUEUE_CONTEXT;
+import static org.jocl.CL.CL_QUEUE_PROPERTIES;
+import static org.jocl.CL.CL_QUEUE_REFERENCE_COUNT;
+import static org.jocl.CL.stringFor_cl_command_queue_properties;
 
-import org.jocl.*;
+import org.jocl.cl_command_queue;
+import org.jocl.cl_context;
+import org.jocl.cl_device_id;
 
 /**
  * Utility methods for obtaining information about cl_command_queue objects
@@ -37,7 +42,7 @@ import org.jocl.*;
 public class CommandQueueInfos {
 	/**
 	 * The context that this command queue belongs to
-	 *
+	 * 
 	 * @param commandQueue
 	 *            The command queue
 	 * @return The value
@@ -54,7 +59,7 @@ public class CommandQueueInfos {
 
 	/**
 	 * The device that this command queue belongs to
-	 *
+	 * 
 	 * @param commandQueue
 	 *            The command queue
 	 * @return The value
@@ -71,7 +76,7 @@ public class CommandQueueInfos {
 
 	/**
 	 * The reference count. Only intended for identifying memory leaks.
-	 *
+	 * 
 	 * @param commandQueue
 	 *            The command queue
 	 * @return The value
@@ -83,7 +88,7 @@ public class CommandQueueInfos {
 
 	/**
 	 * The properties of the command queue.
-	 *
+	 * 
 	 * @param commandQueue
 	 *            The command queue
 	 * @return The value
@@ -95,7 +100,7 @@ public class CommandQueueInfos {
 
 	/**
 	 * The properties of the command queue, as a String
-	 *
+	 * 
 	 * @param commandQueue
 	 *            The command queue
 	 * @return The value
